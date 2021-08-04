@@ -48,9 +48,9 @@ let secondSelectedTower = null;
 let selectedDisc = null;
 
 function catchDisc(evt) {
-    
-        if (clickStage === false) {
-            if (evt.target.childElementCount > 0 || evt.target.className === "discs") {
+
+    if (clickStage === false) {
+        if (evt.target.childElementCount > 0 || evt.target.className === "discs") {
             if (evt.target.className === "discs") {
                 firstSelectedTower = evt.target.parentElement;
                 selectedDisc = firstSelectedTower.lastChild;
@@ -60,7 +60,7 @@ function catchDisc(evt) {
             }
             clickStage = true;
         }
-        
+
     } else if (firstSelectedTower !== null) {
         if (evt.target.className === "discs") {
             secondSelectedTower = evt.target.parentElement;
@@ -70,6 +70,7 @@ function catchDisc(evt) {
 
         deployDisc(firstSelectedTower, secondSelectedTower)
     }
+    victoryCondition();
 }
 
 function deployDisc(firstSelectedTower, secondSelectedTower) {
@@ -83,4 +84,19 @@ function deployDisc(firstSelectedTower, secondSelectedTower) {
     firstSelectedTower = null;
     secondSelectedTower = null;
     clickStage = false;
+}
+function victoryCondition() {
+    let lastTower = document.getElementById("tower3");
+    let verify = lastTower.childElementCount;
+
+    if (verify === 4) {
+        let winner = document.querySelector(".winner");
+        winner.classList.toggle("active");
+    }
+}
+
+function gameEnd() {
+    let winner = document.querySelector(".winner");
+    winner.classList.toggle("active");
+    document.location.reload();
 }
