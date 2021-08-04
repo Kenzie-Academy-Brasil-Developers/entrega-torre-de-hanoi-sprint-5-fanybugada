@@ -45,4 +45,12 @@ html {
         height: 30px;
     }
 
+    .discs_teste {
+        border: 2px rgb(26, 2, 2) solid;
+    }
+
+    .discs {
+        border: 2px transparent;
+    }
+
 }
