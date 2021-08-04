@@ -37,4 +37,18 @@ let disc4 = document.createElement("div");
     tower1.appendChild(disc3);
     tower1.appendChild(disc4);
 
-    
+function victoryCondition () {
+    let lastTower = document.getElementById("tower3");
+    let verify = lastTower.childElementCount;
+
+        if (verify === 4) {
+            let winner = document.getElementsByClassName("winner");
+                winner.classList.toggle("active");                  
+        }
+}
+
+function close () {
+    let winner = document.getElementsByClassName("winner");
+        winner.classList.toggle("active");
+    document.location.reload();
+}
