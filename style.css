@@ -7,85 +7,162 @@ html {
     text-decoration: none;
 }
 
+h1{
+    text-align: center;
+}
+
+#rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.towers {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 15px;
+    height: 250px;
+    background: black;
+    margin-top: 12%;
+    margin-right: 12%;
+    margin-left: 12%;
+    float: left;
+    border-radius: 4px;
+    border: 2px;
+}
+
+.towers:hover {
+    background-color: #949494;
+}
+
+#disc1 {
+    background: red;
+    width: 100px;
+    height: 25px;
+}
+
+#disc2 {
+    background: yellow;
+    width: 80px;
+    height: 25px;
+}
+
+#disc3 {
+    background: blue;
+    width: 50px;
+    height: 25px;
+}
+
+#disc4 {
+    background: green;
+    width: 30px;
+    height: 25px;
+}
+
+.discs_teste {
+    border: 4px rgb(48, 46, 46) solid;
+    border-radius: 5px;
+}
+
+.discs {
+    border: 2px transparent;
+    border-radius: 4px;
+}
+
+.winner {
+    position: fixed;
+    background: #949494;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.winner h1 {
+    color: snow;
+    text-align: center;
+}
+
+.winner.active {
+    visibility: visible;
+    opacity: 0.99;
+}
+
+.close {
+    position: absolute;
+    max-width: 33px;
+    top: 33px;
+    right: 33px;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+}
+
+#largeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (min-width: 760px) {
-    div.towers {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 15px;
-        height: 250px;
-        background: black;
-        margin-top: 12%;
-        margin-right: 12%;
-        margin-left: 12%;
-        float: left;
-    }
-
     #disc1 {
         background: red;
         width: 150px;
         height: 30px;
     }
-
+    
     #disc2 {
         background: yellow;
         width: 110px;
         height: 30px;
     }
-
+    
     #disc3 {
         background: blue;
         width: 70px;
         height: 30px;
     }
-
+    
     #disc4 {
         background: green;
         width: 35px;
         height: 30px;
     }
 
-    .discs_teste {
-        border: 2px rgb(26, 2, 2) solid;
-    }
-
-    .discs {
-        border: 2px transparent;
-    }
-
-    .winner {
-        position: fixed;
-        background: #949494;
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 5px;
-    }
-
-    .winner h1 {
-        color: snow;
-        text-align: center;
-    }
-
-    .winner.active {
-        visibility: visible;
-        opacity: 0.99;
-    }
-
-    .close {
-        position: absolute;
-        max-width: 33px;
-        top: 33px;
-        right: 33px;
+    .towers {
         cursor: pointer;
     }
 
+    .discs {
+        cursor: pointer;
+    }
+
+    #container {
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid gray;
+    }
+
+    #largeContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

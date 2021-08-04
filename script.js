@@ -50,6 +50,8 @@ let selectedDisc = null;
 function catchDisc(evt) {
 
     if (clickStage === false) {
+        console.log(firstSelectedTower)
+        console.log(secondSelectedTower)
         if (evt.target.childElementCount > 0 || evt.target.className === "discs") {
             if (evt.target.className === "discs") {
                 firstSelectedTower = evt.target.parentElement;
@@ -57,6 +59,8 @@ function catchDisc(evt) {
                 selectedDisc.className = "discs_teste";
             } else {
                 firstSelectedTower = evt.target;
+                selectedDisc = firstSelectedTower.lastChild;
+                selectedDisc.className = "discs_teste";
             }
             clickStage = true;
         }
