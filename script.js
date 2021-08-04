@@ -39,9 +39,13 @@ tower1.appendChild(disc4);
 
 let clickStage = false;
 
-const clickSpace = document.getElementById("container");
+const spaceTower1 = document.getElementById("tower1");
+const spaceTower2 = document.getElementById("tower2");
+const spaceTower3 = document.getElementById("tower3");
 
-clickSpace.addEventListener("click", catchDisc);
+spaceTower1.addEventListener("click", catchDisc);
+spaceTower2.addEventListener("click", catchDisc);
+spaceTower3.addEventListener("click", catchDisc);
 
 let firstSelectedTower = null;
 let secondSelectedTower = null;
