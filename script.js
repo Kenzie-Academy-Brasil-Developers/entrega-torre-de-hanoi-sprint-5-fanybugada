@@ -42,13 +42,13 @@ function victoryCondition () {
     let verify = lastTower.childElementCount;
 
         if (verify === 4) {
-            let winner = document.getElementsByClassName("winner");
+            let winner = document.querySelector(".winner");
                 winner.classList.toggle("active");                  
         }
 }
 
-function close () {
-    let winner = document.getElementsByClassName("winner");
+function close() {
+    let winner = document.querySelector(".winner");
         winner.classList.toggle("active");
     document.location.reload();
 }
