@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tower of Hanói</title>
+</head>
+
+<body>
+    <h1>Torre de Hanoi</h1>
+    <div id="largeContainer">
+        <section id="container"></section>
+    </div>
+
+    <section id="rules">
+        <h2>Regras do Jogo</h2>
+        <ol>
+            <li>Apenas um disco pode ser movido por vez.</li>
+            <li>Cada movimento consiste de pegar o disco de cima de uma das pilhas e movê-lo para o topo de outra pilha.</li>
+            <li>Nenhum disco pode ser colocado no topo de um disco menor.</li>
+            <li>Mova todos os discos para a última torre para ganhar!</li>
+        </ol>
+
+    </section>
+
+    <div class="winner">
+        <h1>Parabéns! Você venceu!!</h1>
+        <img src="./Close-icon.png" alt="close" class="close" onclick="gameEnd()">
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
